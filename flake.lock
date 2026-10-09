@@ -1,0 +1,228 @@
+{
+  "nodes": {
+    "flake-utils": {
+      "inputs": {
+        "systems": "systems"
+      },
+      "locked": {
+        "lastModified": 1731533236,
+        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "fzf-tab": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1780551775,
+        "narHash": "sha256-YhTSu0P7mFlVx1zBvbT0jNstkamcZHhPYJHKMAHgyuM=",
+        "owner": "Aloxaf",
+        "repo": "fzf-tab",
+        "rev": "24105b15714bfec37989ed5c5b6e60f572253019",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Aloxaf",
+        "repo": "fzf-tab",
+        "type": "github"
+      }
+    },
+    "jj-starship": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1778676598,
+        "narHash": "sha256-NLds7i1ZmscicaNLmkZCWmc7A+367BXxGioRd4yYof8=",
+        "owner": "dmmulroy",
+        "repo": "jj-starship",
+        "rev": "292224a93d5490332f32cc26d77676ccaeec0bfa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "dmmulroy",
+        "repo": "jj-starship",
+        "type": "github"
+      }
+    },
+    "laravel-sail": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1765443723,
+        "narHash": "sha256-aNAVsQMLSVL4HuXgnJRm9ePMsLKLXQ30TtbaYfshJN0=",
+        "owner": "ariaieboy",
+        "repo": "laravel-sail",
+        "rev": "8fb7831a1f06e079a963c5c6f85058f7faab9cf8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ariaieboy",
+        "repo": "laravel-sail",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1790185690,
+        "narHash": "sha256-xJ+X4hBtOcAFGBOe5nAMyMUeF9foJBmIOu3NjBqBycU=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4975466d324710c576dc11ad614684e6bd8cad8e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nu-scripts": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1787656855,
+        "narHash": "sha256-vW8Lz9MQwIT7WKv2ZkVTiq+398p20RszGZhIZ3I2kq8=",
+        "owner": "nushell",
+        "repo": "nu_scripts",
+        "rev": "cee236cf46a597b43f36b56ccee5881fc0483c56",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nushell",
+        "repo": "nu_scripts",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "fzf-tab": "fzf-tab",
+        "jj-starship": "jj-starship",
+        "laravel-sail": "laravel-sail",
+        "nixpkgs": "nixpkgs",
+        "nu-scripts": "nu-scripts",
+        "tmux-1password": "tmux-1password",
+        "tmux-tokyo-night": "tmux-tokyo-night",
+        "treefmt-nix": "treefmt-nix",
+        "viicslen-lib": "viicslen-lib"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "systems_2": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "tmux-1password": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1748003284,
+        "narHash": "sha256-0ezD7TSNCFL+spPhbTHlITeyNOw/lyzZD6cdiT5NU/0=",
+        "owner": "yardnsm",
+        "repo": "tmux-1password",
+        "rev": "fee36493fe352e34f46f2e293a218a6667607b00",
+        "type": "github"
+      },
+      "original": {
+        "owner": "yardnsm",
+        "repo": "tmux-1password",
+        "type": "github"
+      }
+    },
+    "tmux-tokyo-night": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1786762154,
+        "narHash": "sha256-NKBUKsRuKMQQuFMDhGcFvRjis/73idHG6GjNtLF3La8=",
+        "owner": "janoamaral",
+        "repo": "tokyo-night-tmux",
+        "rev": "fe1faa1aac237d7d7b69d8fdceb55a33222c8cfb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "janoamaral",
+        "repo": "tokyo-night-tmux",
+        "type": "github"
+      }
+    },
+    "treefmt-nix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1791203292,
+        "narHash": "sha256-vuzVwvjeucSnwKwMBpyP8r5IzdrMKCHEdwTrRFwUN7I=",
+        "owner": "numtide",
+        "repo": "treefmt-nix",
+        "rev": "03d8ee1bcbc8f9638907bb79edb9673151d0e22b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "viicslen-lib": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": "systems_2",
+        "treefmt-nix": [
+          "treefmt-nix"
+        ]
+      },
+      "locked": {
+        "lastModified": 1791221471,
+        "narHash": "sha256-3NIkuawyfrc8oYjbz6Q2EGB06/SEpQx6cFoEmF0KuNc=",
+        "owner": "viicslen-nix",
+        "repo": "lib",
+        "rev": "4016240ff53e60ecb5711cf08d418f0475bca581",
+        "type": "github"
+      },
+      "original": {
+        "owner": "viicslen-nix",
+        "repo": "lib",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
