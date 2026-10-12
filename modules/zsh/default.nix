@@ -33,11 +33,6 @@ in {
               src = inputs.fzf-tab;
               file = "fzf-tab.plugin.zsh";
             }
-            {
-              name = "laravel-sail";
-              src = inputs.laravel-sail;
-              file = "laravel-sail.plugin.zsh";
-            }
           ];
 
           oh-my-zsh = {

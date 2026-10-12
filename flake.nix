@@ -25,10 +25,6 @@
       url = "github:Aloxaf/fzf-tab";
       flake = false;
     };
-    laravel-sail = {
-      url = "github:ariaieboy/laravel-sail";
-      flake = false;
-    };
     nu-scripts = {
       url = "github:nushell/nu_scripts";
       flake = false;

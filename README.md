@@ -9,7 +9,7 @@ once imported.
 
 | Module | Provides |
 | --- | --- |
-| `zsh` | oh-my-zsh, autosuggestions, syntax highlighting, fzf-tab, laravel-sail |
+| `zsh` | oh-my-zsh, autosuggestions, syntax highlighting, fzf-tab |
 | `bash` | History settings |
 | `tmux` | Tokyo Night, 1Password picker, vi keys, nushell panes |
 | `starship` | Prompt config, jj-starship, `starship-smart-dir` |
