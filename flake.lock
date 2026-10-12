@@ -55,22 +55,6 @@
         "type": "github"
       }
     },
-    "laravel-sail": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1765443723,
-        "narHash": "sha256-aNAVsQMLSVL4HuXgnJRm9ePMsLKLXQ30TtbaYfshJN0=",
-        "owner": "ariaieboy",
-        "repo": "laravel-sail",
-        "rev": "8fb7831a1f06e079a963c5c6f85058f7faab9cf8",
-        "type": "github"
-      },
-      "original": {
-        "owner": "ariaieboy",
-        "repo": "laravel-sail",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1790185690,
@@ -107,7 +91,6 @@
       "inputs": {
         "fzf-tab": "fzf-tab",
         "jj-starship": "jj-starship",
-        "laravel-sail": "laravel-sail",
         "nixpkgs": "nixpkgs",
         "nu-scripts": "nu-scripts",
         "tmux-1password": "tmux-1password",
