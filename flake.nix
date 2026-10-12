@@ -20,6 +20,10 @@
       url = "github:dmmulroy/jj-starship";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hunk = {
+      url = "github:modem-dev/hunk";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     fzf-tab = {
       url = "github:Aloxaf/fzf-tab";
@@ -49,7 +53,7 @@
     inherit (nixpkgs) lib;
     inherit (viicslen-lib.lib) genSystems;
 
-    programs = ["zsh" "bash" "tmux" "starship" "atuin" "git" "jujutsu" "btop" "nushell"];
+    programs = ["zsh" "bash" "tmux" "starship" "atuin" "git" "gh" "ssh" "hunk" "jujutsu" "btop" "nushell"];
 
     # The module closes over this flake's inputs: home-manager's extraSpecialArgs
     # would shadow an `inputs` module argument with the consumer's set.

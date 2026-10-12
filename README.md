@@ -35,9 +35,12 @@ can't drift apart.
 | `starship` | Prompt with [jj-starship](https://github.com/dmmulroy/jj-starship) and `starship-smart-dir`, which shows the repo name at a worktree's root |
 | `atuin` | Shell history with workspaces and a vim keymap |
 | `git` | Identity, ssh signing, aliases (`nah`, `forget`, `uncommit`, …), rebase-on-pull |
+| `gh` | GitHub CLI as git's credential helper, prompts off, [gh-stack](https://github.github.com/gh-stack/), the account in `hosts.yml` |
+| `hunk` | [hunk](https://github.com/modem-dev/hunk) as git's diff viewer, with vim-style scrolling |
+| `ssh` | Control sockets under `~/.ssh/controlmasters` |
 | `jujutsu` | jj with lazyjj and mergiraf, meld as the diff editor |
 | `btop` | vim keys, compact boxes |
-| `profile` | Shared aliases, fzf/zoxide/direnv/carapace/hstr, `EDITOR=nvim`, and the commit identity git and jj use |
+| `profile` | Shared aliases, fzf/zoxide/direnv/carapace/hstr, `EDITOR=nvim`, `preferXdgDirectories`, and the identity git, jj and gh use |
 
 Every module is on once imported; turn one off with
 `modules.programs.<name>.enable = false`.
@@ -64,12 +67,12 @@ Then, in a home-manager configuration:
 | Output | What |
 | --- | --- |
 | `homeManagerModules.default` | Every module |
-| `homeManagerModules.<name>` | One module: `zsh`, `bash`, `tmux`, `starship`, `atuin`, `git`, `jujutsu`, `btop`, `nushell`, `profile` |
+| `homeManagerModules.<name>` | One module: `zsh`, `bash`, `tmux`, `starship`, `atuin`, `git`, `gh`, `hunk`, `ssh`, `jujutsu`, `btop`, `nushell`, `profile` |
 | `formatter.<system>`, `checks.<system>` | treefmt, plus `treefmt` and `statix` checks |
 
 > [!NOTE]
 > The modules close over this flake's own inputs (fzf-tab, nu_scripts, the
-> tmux plugins, jj-starship), so the consumer doesn't declare any of them.
+> tmux plugins, jj-starship, hunk), so the consumer doesn't declare any of them.
 > Impermanence directories are only declared where
 > `modules.functionality.impermanence` exists.
 
@@ -82,6 +85,7 @@ All live under `modules.programs`.
 | `shellProfile.name` | `"Victor R"` | Commit author for git and jj |
 | `shellProfile.email` | GitHub noreply address | Commit email for git and jj |
 | `shellProfile.signingKey` | `profile/git-signing-key.pub` | Public ssh key commits are signed with; `null` where the private key isn't available |
+| `shellProfile.githubUser` | `"viicslen"` | GitHub account written to gh's `hosts.yml`; `null` leaves the file to `gh auth login` |
 | `jujutsu.meld` | `true` | meld as jj's diff and merge editor; turn off without a display |
 | `nushell.enableContainerIntegration` | `true` | The `docker`/`podman` table wrappers |
 | `nushell.extraConfig` | `""` | Nushell code appended to the bundled config |

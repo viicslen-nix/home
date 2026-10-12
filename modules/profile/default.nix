@@ -37,10 +37,19 @@ in {
       default = readFile ./git-signing-key.pub;
       description = "Public ssh key commits are signed with; null on a machine without the private half.";
     };
+    githubUser = mkOption {
+      type = types.nullOr types.str;
+      default = "viicslen";
+      description = "GitHub account gh is logged in as.";
+    };
   };
 
   config = mkIf cfg.enable {
     home = {
+      # Tools that honour it drop their $HOME dotfile for the XDG dir; flipping
+      # it back strands whatever state already moved.
+      preferXdgDirectories = true;
+
       # home-manager feeds home.shellAliases into bash, zsh, fish and nushell alike.
       shellAliases = {
         pn = "pnpm";
@@ -84,6 +93,7 @@ in {
     };
 
     modules.programs = {
+      gh.user = cfg.githubUser;
       git = {
         user = cfg.name;
         inherit (cfg) email signingKey;

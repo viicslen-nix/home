@@ -46,3 +46,20 @@ that path, and the path does not exist on the phone. `mkPersistence` returns
 meld is a GTK app, and the phone has no display and no signing key.
 `signingKey = null` drops the whole `signing` table, because
 `behavior = "own"` with no key fails every commit.
+
+## hunk keybindings
+
+hunk's defaults are already vim-ish (`j`/`k`, `g`/`G`, `d`/`u`, `[`/`]`); the
+`keybindings` block only fills the gaps (vim's `ctrl+` page/half-page scrolls,
+listed alongside the defaults they would otherwise replace). Binding a key takes
+it from whatever held it as a default, so `toggleLineNumbers` needs a new home
+(`ctrl+l`) once `l` scrolls the code pane right.
+
+## Moving a module here can reorder `home.packages`
+
+`hunk` imports its upstream module from inside ours, one level deeper than
+`presets/dev` used to import it, so `hunkdiff` moved to the front of
+`home.packages`. The package set was unchanged (118 entries), and `buildEnv`
+fails on any collision, so the order affects no file; only the `.drv` hash
+moved. Compare the sorted `chosenOutputs` of `home-manager-path` when a move
+does this, rather than the generation hash.
