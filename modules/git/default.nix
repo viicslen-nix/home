@@ -57,12 +57,16 @@ in {
             forgetlist = "!git fetch -p && git branch -vv | awk '/: gone]/{print $1}'";
             uncommit = "reset --soft HEAD~0";
           };
-          init.defaultBranch = cfg.defaultBranch;
+
+          push = {
+            gpgSign = "if-asked";
+            autoSetupRemote = true;
+          };
 
           pull.rebase = true;
           merge.autostash = true;
           rebase.autostash = true;
-          push.autoSetupRemote = true;
+          init.defaultBranch = cfg.defaultBranch;
         }
         // optionalAttrs cfg.jetbrainIntegration.enable {
           diff.tool = "jetbrains";
