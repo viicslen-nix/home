@@ -27,6 +27,11 @@ in {
           autosuggestion.enable = true;
           syntaxHighlighting.enable = true;
 
+          # Agents (Claude Code, opencode) run unquoted globs, `====` and `$F` as if sh.
+          envExtra = ''
+            [[ -n $CLAUDECODE || -n $OPENCODE ]] && setopt no_nomatch no_equals sh_word_split
+          '';
+
           plugins = [
             {
               name = "fzf-tab";
